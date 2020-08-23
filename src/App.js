@@ -94,7 +94,7 @@ class App extends React.Component {
 
   onSubmit = () => {
     this.setState({imageUrl: this.state.input})
-    fetch("http://joel-node.herokuapp.com/imageAPI", {
+    fetch("https://joel-node.herokuapp.com/imageAPI", {
       method: "post",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({
@@ -104,7 +104,7 @@ class App extends React.Component {
     .then(response => response.json())
     .then(response => {
       if (response) {
-        fetch("http://joel-node.herokuapp.com/image", {
+        fetch("https://joel-node.herokuapp.com/image", {
           method: "put",
           headers: {"Content-Type": "application/json"},
           body: JSON.stringify({
